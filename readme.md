@@ -18,10 +18,7 @@ this plugin is develop to integrate WooCommerce store with TCS Express and Logis
 
 == Description ==
 
-
-This plugin is developed to help the ecommerece platform in Pakistan,
-    so they can reduce effort of adding new shipments into tcs and focus into 
-    the areas which can really give them benifit in term of revenue.
+This plugin is developed to help the ecommerece platform in Pakistan. So they can reduce effort of adding new shipments into tcs and focus into the areas which can really give them benifit in term of revenue.
 
 == Installation ==
 
