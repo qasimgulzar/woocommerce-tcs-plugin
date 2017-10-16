@@ -14,11 +14,12 @@ License: GPLv2 or later
 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-this plugin is develop to integrate WooCommerce store with TCS Express and Logistic company's system in order to add new shipments
+This plugin is develop to integrate WooCommerce store with TCS Express and Logistic company's system in order to add new shipments
 
 == Description ==
 
 This plugin is developed to help the ecommerece platform in Pakistan. So they can reduce effort of adding new shipments into tcs and focus into the areas which can really give them benifit in term of revenue.
+WooCommerce Tcs Plugin is using thired party soap api which is exposed by tcs to the developers so they can easily integrate their systems with tcs make workflow more handy.
 
 == Installation ==
 
