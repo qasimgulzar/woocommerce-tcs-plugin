@@ -1,16 +1,23 @@
 === WooTcsShipmentMaker ===
+
 Contributors: Muhammad Qasim Gulzar
-Donate link: 
-Tags: 
+Donate link:
+ 
+Tags:
+ 
 Requires at least: php5
 Tested up to: php7
-Stable tag: 
+
+Stable tag:
+ 
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 this plugin is develop to integrate WooCommerce store with TCS Express and Logistic company's system in order to add new shipments
 
 == Description ==
+
 
 This plugin is developed to help the ecommerece platform in Pakistan,
     so they can reduce effort of adding new shipments into tcs and focus into 
@@ -24,9 +31,8 @@ This plugin is developed to help the ecommerece platform in Pakistan,
 
 == Frequently asked questions ==
 
-= A question that someone might have =
+= How to set TCS account credentials. =
 
-How to set TCS account credentials.
 Goto WooCommerce Settings > TCS > Set Fields > Save Settings.
 
 
