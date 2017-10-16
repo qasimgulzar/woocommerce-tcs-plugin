@@ -11,53 +11,57 @@
 //php-config --configure-options --enable-soap
 //sudo apt-get install php7.0-soap
 //sudo apt-get install php7.0-xml
-class GetAllCountriesResult{
+class GetAllTcsCountriesResult
+{
     public $schema;
-    /**
-     * GetAllCountriesResult constructor.
-     */
 }
-class GetAllCountriesResponse{
+
+class GetAllTcsCountriesResponse
+{
 }
-class GetAllCitiesResult{
+
+class GetAllTcsCitiesResult
+{
     public $schema;
-    /**
-     * GetAllCountriesResult constructor.
-     */
 }
-class GetAllCitiesResponse{
+
+class GetAllTcsCitiesResponse
+{
 }
-class GetAllOriginCitiesResult{
+
+class GetAllOriginCitiesResult
+{
     public $schema;
-    /**
-     * GetAllCountriesResult constructor.
-     */
 }
-class GetAllOriginCitiesResponse{
+
+class GetAllOriginCitiesResponse
+{
 }
-class GetCNDetailsByReferenceNumberResult{
+
+class GetCNDetailsByReferenceNumberResult
+{
     public $schema;
-    /**
-     * GetAllCountriesResult constructor.
-     */
 }
-class GetCNDetailsByReferenceNumberResponse{
+
+class GetCNDetailsByReferenceNumberResponse
+{
 }
-class InsertDataResult{
-    /**
-     * GetAllCountriesResult constructor.
-     */
+
+class InsertDataResult
+{
 }
-class InsertDataResponse{
+
+class InsertDataResponse
+{
 }
 
 
-
-
-class  TcsAPI{
+class  TcsAPI
+{
 
     private $option;
     private $client;
+
     /**
      * TcsAPI constructor.
      */
@@ -65,10 +69,10 @@ class  TcsAPI{
     {
         $this->option = array('trace' => 1,
             'soap_version' => SOAP_1_2,
-            'classmap' => array('GetAllCountriesResponse'=>'GetAllCountriesResponse',
-                'GetAllCountriesResult' => 'GetAllCountriesResult',
-                'GetAllCitiesResponse' => 'GetAllCitiesResponse',
-                'GetAllCitiesResult' => 'GetAllCitiesResult',
+            'classmap' => array('GetAllTcsCountriesResponse' => 'GetAllTcsCountriesResponse',
+                'GetAllTcsCountriesResult' => 'GetAllTcsCountriesResult',
+                'GetAllTcsCitiesResponse' => 'GetAllTcsCitiesResponse',
+                'GetAllTcsCitiesResult' => 'GetAllTcsCitiesResult',
                 'GetAllOriginCitiesResponse' => 'GetAllOriginCitiesResponse',
                 'GetAllOriginCitiesResult' => 'GetAllOriginCitiesResult',
                 'GetCNDetailsByReferenceNumberResponse' => 'GetCNDetailsByReferenceNumberResponse',
@@ -77,22 +81,23 @@ class  TcsAPI{
                 'InsertDataResult' => 'InsertDataResult',
             )
         );
-        $this->client = new SoapClient("http://webapp.tcscourier.com/codapi/Service1.asmx?WSDL",$this->option);
+        $this->client = new SoapClient("http://webapp.tcscourier.com/codapi/Service1.asmx?WSDL", $this->option);
     }
 
-    public function createBooking($entry=array()){
-//      [TODO]  Please don't call below code otherwise it will create an entry in live system.
+    public function createBooking($entry = array())
+    {
 
         $response = $this->client->InsertData($entry);
         return $response->InsertDataResult;
-//        return "000000000"; // example tracking code
     }
 
-    public function GetAllCities(){
-        $response=$this->client->GetAllCities();
+    public function GetAllCities()
+    {
+        $response = $this->client->GetAllCities();
         return $response;
     }
 }
+
 //InsertDataResponse Object
 //(
 //    [InsertDataResult] => 77430100044
